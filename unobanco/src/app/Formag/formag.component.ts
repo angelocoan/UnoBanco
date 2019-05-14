@@ -7,7 +7,7 @@ import { Hero }    from '../hero';
   templateUrl: './formag.component.html',
   styleUrls: ['./formag.component.css']
 })
-export class HeroFormComponent {
+export class formagcomponent {
 
   powers = ['Chapecó - SC', 'Pato Branco - PR',
             'Florianópolis - SC', 'Xanxerê - SC', 'Porto Alegre - RS'];

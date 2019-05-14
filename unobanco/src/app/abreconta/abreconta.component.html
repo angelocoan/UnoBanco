@@ -1,0 +1,86 @@
+<p>
+ 
+#######################################################################################################
+
+</p>
+
+ <div class="container">
+ <div [hidden]="submitted">
+   <h1>Abertura de Conta</h1>
+   <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+     <div class="form-group">
+       <label for="cpf/cnpj">CPF/CNPJ</label>
+       <input type="text" class="form-control" id="cpf/cnpj"
+              required
+              [(ngModel)]="model.codigo" name="codigo"
+              #name="ngModel">
+       <div [hidden]="codigo.valid || codigo.pristine"
+            class="alert alert-danger">
+         Campo é obrigatório!
+       </div>
+     </div>
+
+     
+       <label for="nomedocliente">Nome/Razão Social</label>
+       <input type="text" class="form-control" id="nomerazao">
+            
+       <label for="data_nascimento">Data de nascimento</label>
+       <input type="date" class="form-control" id="datanascimento">
+
+       <label for="Sexo">Informe sexo do cliente</label><br>
+       <input type="radio" name="sexo" value="M" checked> M<br>
+       <input type="radio" name="sexo" value="F"> F<br>
+       
+       <p>
+       <label for="cidadeuf">Cidade/UF</label><br>
+        <select name="cidade">
+        <option value="Chapecó - SC">Chapecó - SC</option>
+        <option value="Pato Branco - PR">Pato Branco - PR</option>
+        <option value="Florianópolis - SC">Florianópolis - SC</option>
+        <option value="Porto Alegre - RS">Porto Alegre - RS</option>
+      </select>
+      </p>
+        
+       <label for="nomedocliente">Endereço</label>
+       <input type="text" class="form-control" id="nomerazao">
+
+       <label for="nomedocliente">Telefone</label>
+       <input type="text" class="form-control" id="nomerazao">
+
+       <label for="nomedocliente">E-mail</label>
+       <input type="text" class="form-control" id="nomerazao">
+
+       <label for="nomedocliente">Agência</label>
+       <input type="text" class="form-control" id="nomerazao">
+
+       <label for="nomedocliente">Tipo de Conta</label>
+       <input type="text" class="form-control" id="nomerazao">
+       
+       <label for="nomedocliente">Conta</label>
+       <input type="text" class="form-control" id="nomerazao">
+
+        <label for="nomedocliente">Conta</label>
+       <input type="text" class="form-control" id="nomerazao">
+
+       <label for="nomedocliente">Senha</label>
+       <input type="text" class="form-control" id="nomerazao"><br>
+       
+     <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Submit</button>
+     <button type="button" class="btn btn-default" (click)="newHero(); heroForm.reset()">New Hero</button>
+     <i>with</i> reset
+
+     &nbsp;&nbsp;
+     <button type="button" class="btn btn-default" (click)="newHero()">New Hero</button>
+     <i>without</i> reset
+
+
+
+
+     
+     <div>
+     
+      Name via form.controls = {{showFormControls(heroForm)}}
+    </div>
+   <!-- - -->
+  </form>
+</div>

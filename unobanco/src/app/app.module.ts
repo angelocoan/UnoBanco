@@ -3,7 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
 
 import { AppComponent }  from './app.component';
-import { HeroFormComponent } from './formag/formag.component';
+import { formagcomponent } from './formag/formag.component';
+import { abrecontacomponent } from './abreconta/abreconta.component';
 
 @NgModule({
   imports: [
@@ -12,7 +13,8 @@ import { HeroFormComponent } from './formag/formag.component';
   ],
   declarations: [
     AppComponent,
-    HeroFormComponent
+    formagcomponent,
+    abrecontacomponent
   ],
   providers: [],
   bootstrap: [ AppComponent ]
