@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import * as Typed from 'typed.js';
+import  Typed from 'typed.js';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-content',
@@ -8,7 +10,7 @@ import * as Typed from 'typed.js';
 })
 export class ContentComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
 
@@ -27,5 +29,7 @@ export class ContentComponent implements OnInit {
 
       const typed = new Typed('.typing-element', options);
   }
-
+  gotoCadastroClientes() {
+    this.router.navigate(['cadastro-clientes']);
+   }
 }
